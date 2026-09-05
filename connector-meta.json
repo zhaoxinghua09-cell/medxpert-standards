@@ -1,0 +1,28 @@
+{
+  "schema": "workbuddy-connector/v1",
+  "name": "MedXpert 全球医疗器械标准库",
+  "version": "1.0.0",
+  "description": "Medical device standards knowledge base (ISO 13485/14971, IEC 60601, MDR Annex VIII, GB 9706, etc.). Read-only MCP runtime for regulatory standards query across 27 knowledge hubs. Zero egress, zero credentials.",
+  "author": "MedXpert (org)",
+  "type": "mcp-server",
+  "auth": {
+    "mode": "none"
+  },
+  "transport": {
+    "type": "stdio",
+    "command": "python",
+    "args": [
+      "server.py"
+    ]
+  },
+  "icon": "icon.png",
+  "examples_zh": [
+    "查 ISO 13485 某条款的合规要点",
+    "比对 IEC 60601-1 与 GB 9706.1 的差异"
+  ],
+  "examples_en": [
+    "Look up ISO 13485 clause requirements",
+    "Compare IEC 60601-1 with GB 9706.1"
+  ],
+  "note": "Read-only MCP server; MedXpert governance line"
+}
