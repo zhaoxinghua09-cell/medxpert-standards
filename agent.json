@@ -1,0 +1,46 @@
+{
+  "schema": "ubic/agent-card/v1",
+  "name": "MedXpert 全球医疗器械标准库",
+  "description": "Medical device standards knowledge base (ISO 13485/14971, IEC 60601, MDR Annex VIII, GB 9706, etc.). Read-only MCP runtime for regulatory standards query across 27 knowledge hubs. Zero egress, zero credentials.",
+  "protocol": "MCP",
+  "provider": {
+    "organization": "MedXpert",
+    "url": "https://medxpert.cn"
+  },
+  "author": "MedXpert (org) · operated by SynomosAI governance line",
+  "capabilities": [
+    "medical device standards",
+    "ISO 13485",
+    "ISO 14971",
+    "IEC 60601",
+    "MDR Annex",
+    "GB 9706",
+    "标准库",
+    "合规标准"
+  ],
+  "keywords": [
+    "medical device standards",
+    "ISO 13485",
+    "ISO 14971",
+    "IEC 60601",
+    "MDR Annex",
+    "GB 9706",
+    "标准库",
+    "合规标准"
+  ],
+  "auth": {
+    "mode": "none",
+    "note": "read-only, no credentials required"
+  },
+  "transport": {
+    "type": "stdio",
+    "command": "python",
+    "args": [
+      "server.py"
+    ]
+  },
+  "homepage": "https://medxpert.cn",
+  "license": "MIT",
+  "installByConsent": "AI may request install; human approves (A3 Law II)",
+  "scope": "regulatory knowledge query — not legal/clinical advice"
+}
