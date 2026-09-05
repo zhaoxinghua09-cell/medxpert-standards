@@ -1,0 +1,66 @@
+{
+  "name": "medxpert-standards",
+  "version": "1.0.0",
+  "description": "Medical device regulatory standards navigator: query the MedXpert-RA-Knowledge base via medxpert-ortho-mcp (standards served as a module of the shared MCP), enforce bi-temporal version determination, and route classification/judgment questions to the right engine.",
+  "author": {
+    "name": "MedXpert"
+  },
+  "agents": [
+    "./agents/medxpert-standards.md"
+  ],
+  "skills": [
+    "./skills/medxpert-standards"
+  ],
+  "dependencies": {
+    "connectors": ["medxpert-ortho-mcp"]
+  },
+  "expertType": "agent",
+  "agentName": "medxpert-standards",
+  "displayName": {
+    "en": "StdNav",
+    "zh": "标准官"
+  },
+  "profession": {
+    "en": "Medical Device Regulatory Standards Navigator",
+    "zh": "医械法规标准导航官"
+  },
+  "displayDescription": {
+    "en": "Navigate the MedXpert regulatory standards knowledge base: query standards, determine applicable versions by business date, and route to classification/judgment engines.",
+    "zh": "导航 MedXpert 医械法规标准知识库：查标准、按业务日期判定适用版本、路由到分类与判定引擎。"
+  },
+  "avatar": "avatars/medxpert-standards.png",
+  "categoryId": "12-IndustryConsultant",
+  "defaultInitPrompt": {
+    "zh": "帮我查 GB 4234.1-2017 现在的现行状态，并说明2026-10-15这个业务日期下骨科植入物适用哪版GMP",
+    "en": "Check the current status of GB 4234.1-2017 and tell me which GMP version applies to orthopedic implants on business date 2026-10-15"
+  },
+  "plugin": "medxpert-standards",
+  "tags": [
+    {
+      "en": "Regulatory Standards",
+      "zh": "法规标准"
+    },
+    {
+      "en": "Version Determination",
+      "zh": "版本判定"
+    },
+    {
+      "en": "Classification Engine",
+      "zh": "分类判定"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "en": "Query standard GB 4234.1-2017 current status",
+      "zh": "查 GB 4234.1-2017 的现行状态"
+    },
+    {
+      "en": "Which GMP version applies on 2026-10-15 for orthopedic implants?",
+      "zh": "2026-10-15 骨科植入物适用哪版GMP？"
+    },
+    {
+      "en": "Find the judgment tree for trauma implants in China",
+      "zh": "找中国创伤类植入物的判定树"
+    }
+  ]
+}
