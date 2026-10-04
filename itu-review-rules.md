@@ -2,10 +2,10 @@
   本文件由 ITU 专家（standards-participation-officer）维护。
   它是 lgd-itu-review.yml 加载的「ITU 专项规则集」，决定 ITU 仓 PR 的专项审阅口径。
   修改须 ITU 专家定稿；版本化记录在此文件顶部。
-  版本：v1.0 · 2026-10-05 立
+  版本：v1.1 · 2026-10-05 红队轮扩面
 -->
 
-# ITU 专项审核规则集（v1.0）
+# ITU 专项审核规则集（v1.1）
 
 > 维护者：ITU 专家 `standards-participation-officer`
 > 作用：被 `lgd-itu-review.yml` 注入为 AI 审阅的 system 上下文；并触发「递交纪律」硬检查。
@@ -23,11 +23,12 @@
 
 ## 3. 递交纪律（机器自动执行，见 lgd-itu-review.yml）
 
-以下模式命中即标红、禁止出门（2026-10-02 全机禁令）：
+以下模式命中即标红、禁止出门（2026-10-02 全机禁令 + 红队轮 v1.1 扩面）：
 
-- 内部流程注释：`<!-- 内部草稿 -->`、`须过 xx 机器闸`、专家终审日期等；
-- 品牌块 / 权属宣告块（`SynomosAI` / `MedXpert` 正文品牌块）；
-- `canonical pin` / `Zenodo DOI` / 内部标识。
+- 内部流程注释：`<!-- 示例注释 -->`、英文 `<!-- internal -->` / `<!-- draft -->`、`须过 xx 机器闸`、专家终审日期等；
+- 品牌块 / 权属宣告块：`SynomosAI` / `MedXpert` 正文品牌块，以及裸权利宣告 `Copyright` / `All rights reserved` / `版权所有` / `权利声明` / `©`（无品牌名也拦）；
+- 身份信号：`ORCID`（含 `0000-xxxx-xxxx-xxx` 形态）；
+- 出版物锚：`canonical pin` / `canonical:` / `Zenodo DOI` / `10.5281/zenodo.xxx` / `doi.org/10.5281/...`。
 
 ## 4. 评审关注点（供 AI 审阅）
 
@@ -40,3 +41,4 @@
 ## 修订记录
 
 - v1.0 (2026-10-05)：初版。术语格式 + 合规勾稽 + 递交纪律硬检查 + 评审关注点。
+- v1.1 (2026-10-05)：红队轮扩面。硬检查正则加 ORCID / 裸权利宣告(©/Copyright/版权所有) / DOI-URL(10.5281/zenodo) / 英文/草稿注释；secret-scan 支持 push 与 ghp_/AKIA/PEM 形态；L1/L2 未配 BYOK 时显式告警而非静默绿勾；issue_comment 重跑改用 issue.number。
